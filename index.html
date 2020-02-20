@@ -11,38 +11,141 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand text-white"> Empresa 10</h2>
+        <nav class="navbar navbar-dark bg-dark column">
+            <div>
+                <img src="https://images.vexels.com/media/users/3/137613/isolated/preview/2ac995b178409a3191e7fec6d857e3e6-r--tulo-de-logotipo-abstrato-geom--trico-by-vexels.png" width="90px">
+                <h2 class="navbar-brand text-white font-weight-bold ">Redes Mandala</h2>
+            </div>
+            
+            
             <a class="btn btn-primary" href=""> Continuar comprando</a>
         </nav>
     </header>
+    <h1 class="text-center">CheckOut</h1>
     <main class="container">
-        <form class="row mt-4">
-            <div class="col-md-4">
+        <form class="row mt-4" id="checkout">
+            <div class="col-md-4 border rouded border-secondary">
                 <header class="bg-dark text-light font-weight-bold rounded p-3">
-                    <img src="https://cdn4.iconfinder.com/data/icons/man-6/48/man-02-512.png" width="60px">
+                    <img src="https://cdn4.iconfinder.com/data/icons/man-6/48/man-02-512.png" width="50px">
                     Dados Pessoais
                 </header>
-                <input type="text" class="form-control mb-2 mt-3" placeholder="Nome" aria-label="Usuário" aria-describedby="basic-addon1">
-                <input type="text" class="form-control mb-2" placeholder="CPF   " aria-label="Usuário" aria-describedby="basic-addon1">
-                <input type="text" class="form-control mb-2" placeholder="Endereço" aria-label="Usuário" aria-describedby="basic-addon1">
+                
+                <label for="nomeUsuario" class="mt-1"> Nome Completo</label>
+                <input type="text" id="nomeUsuario" name="nome" class="form-control mb-2" placeholder=" Digite seu Nome Completo" id="emailUsuario" aria-label="Usuário" aria-describedby="basic-addon1">
+                
+                <label for="cpfUsuario" class=""> CPF </label>
+                <input type="text" id="cpfUsuario" name="cpf" class="form-control mb-2" placeholder="Digite seu CPF" aria-label="Usuário" aria-describedby="basic-addon1">
+
+                <label for="telefoneUsuario" class=""> Telefone </label>
+                <input type="tell" id="telefoneUsuario" name="telefone" class="form-control mb-2" placeholder="Digite seu Telefone" aria-label="Usuário" aria-describedby="basic-addon1">
+
+                <label for="emailUsuario" class=""> Email </label>
+                <input type="email" id="emailUsuario" name="email" class="form-control mb-2" placeholder="Digite seu Email" aria-label="Usuário" aria-describedby="basic-addon1">
+
+                <label for="senhaUsuario" class=""> Senha </label>
+                <input type="password" id="senhaUsuario" name="senha" class="form-control mb-2" placeholder="Digite sua Senha" aria-label="Usuário" aria-describedby="basic-addon1">
+
+                <label for="confirmarSenha" class=""> Confirmar Senha </label>
+                <input type="password" id="confirmarSenha" name="confirmarSenha" class="form-control mb-2" placeholder="Confirme sua Senha" aria-label="Usuário" aria-describedby="basic-addon1">
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4 border rounded border-secondary">
                 <header class="bg-dark text-light font-weight-bold rounded p-3">
-                    <img src="https://cdn2.iconfinder.com/data/icons/vivid/48/van-512.png" width="60px">
+                    <img src="https://cdn2.iconfinder.com/data/icons/vivid/48/van-512.png" width="50px">
                     Entrega
                 </header>
-            </div>
 
-            <div class="col-md-4">
+                <label for="cep" class="mt-1"> CEP </label>
+                <input type="text" id="cep" name="cep" class="form-control mb-2" placeholder="Digite seu CEP" aria-label="Usuário" aria-describedby="basic-addon1">
+
+                <label for="endereco" class=""> Endereco </label>
+                <input type="text" id="endereco" name="endereco" class="form-control mb-2" placeholder="Endereço" aria-label="Usuário" aria-describedby="basic-addon1">
+
+                <label for="numero" class=""> Número </label>
+                <input type="text" id="endereco" name="numero" class="form-control mb-2" placeholder="Número" aria-label="Usuário" aria-describedby="basic-addon1">
+
+                <label for="complemento" class=""> Complemento </label>
+                <input type="text" id="complemento" name="complemento" class="form-control mb-2" placeholder="Complemento" aria-label="Usuário" aria-describedby="basic-addon1">
+
+                <label for="bairro" class=""> Bairro </label>
+                <input type="text" id="bairro" name="bairro" class="form-control mb-2" placeholder="Bairro" aria-label="Usuário" aria-describedby="basic-addon1">
+
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="estado"> Estado </label>
+                        <select name="estado" class="form-control">
+                            <option value="" disabled selected> Estado </option>
+                            <option value="SP"> São Paulo </option>
+                            <option value="RJ"> Rio De Janeiro </option>
+                            <option value="ES"> Espirito Santo </option>
+                        </select> 
+                </div>
+
+            <div class="col-md-6">
+                    <label for="cidade"> Cidade </label>
+                    <input type="text" id="cidade" name="cidade" class="form-control" placeholder="Cidade">
+            </div>
+            </div>
+                <h4 for="" class="mt-2 bg-info text-light rounded"> Formas de Envio </h4>
+                
+                <div class="form-check form-check">
+                    <input class="form-check-input" type="radio" name="envio" id="envio1" value="option1" checked>
+                    <label class="form-check-label" for="envio1">R$50,00 Entrega Rápida</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="envio" id="envio2" value="option1" checked>
+                    <label class="form-check-label" for="envio2">R$20,00 Entrega Comum</label>
+                </div>
+            </div>
+            
+
+            <div class="col-md-4 border rounded border-secondary">
                 <header class="bg-dark text-light font-weight-bold rounded p-3">
-                    <img src="https://cdn3.iconfinder.com/data/icons/luchesa-vol-9/128/Purse-512.png" width="60px">
+                    <img src="https://cdn3.iconfinder.com/data/icons/luchesa-vol-9/128/Purse-512.png" width="50px">
                     Pagamento
                 </header>
+                <div class="col bg-info rounded">
+                    <h4 class="mt-1 text-light">Nome Do Produto:</h4>
+                    <h5 class="text-light">Rede De Descanso Indiana</h5>
+                </div>
+                <div class="rouded">
+                    <img src="https://www.momentum.com.br/files/thumb/47269bd8a3c9419176344a0cc0825dc8.jpg/1140/521/fit" width="350px"
+                    height="170px">
+                </div>
+                <div class="col bg-info rounded">
+                    <h4 class="mt-1 text-light">Total Da Compra:</h4>
+                    <h5 class="text-light">R$ 299,00</h4>
+                </div>
+
+                <label for=""> Número do Cartão </label>
+                <input type="number" name="cartao" id="cartao" class="form-control" placeholder="Nº Cartão" aria-label="Usuário" aria-describedby="basic-addon1">
+
+                <div class="row mt-2 mb-2">
+                    <div class="col-md-8">
+                        <label for="estado"> Data De Validade </label>
+                        <input type="month" id="validade" name="validade" class="form-control" placeholder="Data De Validade">
+                        
+                </div>
+
+                <div class="col-md-4">
+                    <label for="cidade">CCV </label>
+                    <input type="number" id="codSeguranca" name="codSeguranca" class="form-control" placeholder="CVV">
+                </div>
+                </div>
+                
+                
+                <label for=""> Nome do Titular </label>
+                <input type="text" class="form-control mb-2" placeholder="Nome do Titular" aria-label="Usuário" aria-describedby="basic-addon1">
+
+                <label for=""> CPF Do Titular</label>
+                <input type="text" class="form-control mb-2" placeholder="CPF Do Titular" aria-label="Usuário" aria-describedby="basic-addon1">
+                <button type="button" class="btn btn-primary btn-lg mb-1 border border-secondary">Finalizar Compra!</button>
+                <button type="button" class="btn btn-danger btn-lg mb-1 border border-secondary">Cancelar :( </button>
+                
             </div>
         </form>
-        
+        <br>
     </main>
 </body>
 </html>
