@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>CheckOut</title>
@@ -24,7 +24,7 @@
     <h1 class="text-center">CheckOut</h1>
     <main class="container">
         <form class="row mt-4" id="checkout">
-            <div class="col-md-4 border rouded border-secondary">
+            <div id="divteste" class="col-md-4 border rounded border-secondary">
                 <header class="bg-dark text-light font-weight-bold rounded p-3">
                     <img src="https://cdn4.iconfinder.com/data/icons/man-6/48/man-02-512.png" width="50px">
                     Dados Pessoais
@@ -74,7 +74,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <label for="estado"> Estado </label>
-                        <select name="estado" class="form-control">
+                        <select name="estado" id="estado" class="form-control">
                             <option value="" disabled selected> Estado </option>
                             <option value="SP"> São Paulo </option>
                             <option value="RJ"> Rio De Janeiro </option>
@@ -87,7 +87,7 @@
                     <input type="text" id="cidade" name="cidade" class="form-control" placeholder="Cidade">
             </div>
             </div>
-                <h4 for="" class="mt-2 bg-info text-light rounded"> Formas de Envio </h4>
+                <h4 for="" class="mt-2 bg-secondary text-light rounded"> Formas de Envio </h4>
                 
                 <div class="form-check form-check">
                     <input class="form-check-input" type="radio" name="envio" id="envio1" value="option1" checked>
@@ -105,7 +105,7 @@
                     <img src="https://cdn3.iconfinder.com/data/icons/luchesa-vol-9/128/Purse-512.png" width="50px">
                     Pagamento
                 </header>
-                <div class="col bg-info rounded">
+                <div class="col bg-secondary rounded">
                     <h4 class="mt-1 text-light">Nome Do Produto:</h4>
                     <h5 class="text-light">Rede De Descanso Indiana</h5>
                 </div>
@@ -113,7 +113,7 @@
                     <img src="https://www.momentum.com.br/files/thumb/47269bd8a3c9419176344a0cc0825dc8.jpg/1140/521/fit" width="350px"
                     height="170px">
                 </div>
-                <div class="col bg-info rounded">
+                <div class="col bg-secondary rounded">
                     <h4 class="mt-1 text-light">Total Da Compra:</h4>
                     <h5 class="text-light">R$ 299,00</h4>
                 </div>
@@ -130,7 +130,7 @@
 
                 <div class="col-md-4">
                     <label for="cidade">CCV </label>
-                    <input type="number" id="codSeguranca" name="codSeguranca" class="form-control" placeholder="CVV">
+                    <input type="number" id="cvv" name="codSeguranca" class="form-control" placeholder="CVV">
                 </div>
                 </div>
                 
@@ -139,13 +139,37 @@
                 <input type="text" class="form-control mb-2" placeholder="Nome do Titular" aria-label="Usuário" aria-describedby="basic-addon1">
 
                 <label for=""> CPF Do Titular</label>
-                <input type="text" class="form-control mb-2" placeholder="CPF Do Titular" aria-label="Usuário" aria-describedby="basic-addon1">
-                <button type="button" class="btn btn-primary btn-lg mb-1 border border-secondary">Finalizar Compra!</button>
-                <button type="button" class="btn btn-danger btn-lg mb-1 border border-secondary">Cancelar :( </button>
+                <input type="text" id="cpfTitular" class="form-control mb-2" placeholder="CPF Do Titular" aria-label="Usuário" aria-describedby="basic-addon1">
+               <div class="d-flex justify-content-center">
+                <button id="finalizar" data-toggle="modal" data-target="#compraFinalizada" type="button" class="btn btn-primary btn-lg mb-1 border border-secondary">Finalizar Compra!</button>
+               </div>
+                
                 
             </div>
         </form>
         <br>
+        <div id="compraFinalizada" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Compra Finalizada!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Sua compra foi finalizada com sucesso!</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
